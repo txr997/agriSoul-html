@@ -2,6 +2,10 @@
     products-showcase-3-start
 */
 .as-products-showcase-3 {
+    &-area {
+        position: relative;
+        z-index: 2;
+    }
     &-sec-title {
         font-size: 140px;
         font-weight: 800;
@@ -10,7 +14,27 @@
         line-height: 1;
         display: flex;
         flex-direction: column;
-        margin-bottom: 45px;
+        margin-bottom: 15px;
+
+        @media #{$xl} {
+            font-size: 120px;
+        }
+
+        @media #{$lg} {
+            font-size: 100px;
+        }
+
+        @media #{$md} {
+            font-size: 80px;
+        }
+
+        @media #{$xs} {
+            font-size: 40px;
+        }
+
+        @media #{$sm} {
+            font-size: 50px;
+        }
 
         span {
             &:nth-child(1) {
@@ -19,6 +43,14 @@
             &:nth-child(2) {
                 align-self: center;
                 margin-left: 130px;
+                background-image: url(../img/product-showcase/ps-3-img-1.jpg);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: cover;
+
+                @media #{$xs} {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -27,6 +59,51 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
+        padding: 40px;
+        margin-left: -40px;
+        margin-right: -40px;
+        border-radius: 20px;
+        background: #fff;
+
+        @media #{$xxl} {
+            padding: 20px;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        @media #{$xl} {
+            padding: 15px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        @media #{$lg} {
+            padding: 15px;
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$md} {
+            padding: 15px;
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr 1fr ;
+        }
+
+        @media #{$xs} {
+            padding: 15px;
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr ;
+        }
+
+        @media #{$sm} {
+            padding: 15px;
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr 1fr ;
+        }
     }
 
 
@@ -37,6 +114,11 @@
         padding: 36px 36px;
         position: relative;
         z-index: 1;
+        overflow: hidden;
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 36px 25px;
+        }
 
         .bg-shape {
             position: absolute;

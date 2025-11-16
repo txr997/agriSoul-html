@@ -3,6 +3,30 @@
     elements-start
 */
 
+.as-slider-btn-3 {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    font-size: 24px;
+    color: var(--as-clr-pr-1);
+    transition: var(--as-cube-2);
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &:hover {
+        background: var(--as-clr-h-1);
+        color: #fff;
+    }
+
+    &:nth-child(1) {
+        i {
+            transform: scale(-1);
+        }
+    }
+}
 /* 
     elements-end
 */

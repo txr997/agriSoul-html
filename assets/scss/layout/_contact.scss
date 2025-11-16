@@ -211,3 +211,92 @@
 /* 
     contact-1-end
 */
+
+/* 
+    contact-2-start
+*/
+.as-contact-3 {
+    &-area {
+        border-radius: 20px;
+        background-color: var(--as-clr-pr-3);
+        margin-left: 12px;
+        margin-right: 12px;
+        padding-top: 305px;
+        margin-top: -180px;
+    }
+
+    &-bg {
+        &-img-1 {
+            width: 10%;
+            position: absolute;
+            top: 23%;
+            left: 8px;
+            z-index: -1;
+        }
+
+        &-img-2 {
+            position: absolute;
+            width: 9%;
+            bottom: -25px;
+            left: 10px;
+            z-index: -1;
+        }
+
+        &-img-3 {
+            text-align: right;
+            width: 14%;
+            position: absolute;
+            bottom: 10px;
+            right: 14px;
+            z-index: -1;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: end;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-left {
+        margin-bottom: 140px;
+
+        @media #{$md,$xs} {
+            margin-bottom: 40px;
+        }
+
+
+        .as-contact-1-form {
+            gap: 16px;
+
+            &-input {
+                color: rgb(0 0 0 / 60%);
+            }
+        }
+    }
+
+
+
+    &-img {
+        &-2 {
+            position: absolute;
+            top: -50px;
+            right: -60px;
+            z-index: -1;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                right: 0;
+            }
+
+        }
+    }
+}
+
+/* 
+    contact-2-end
+*/
