@@ -194,6 +194,115 @@
     projects-1-end
 */
 
+/* 
+    projects-3-start
+*/
+.as-projects-3 {
+    &-area {
+        margin-left: 12px;
+        margin-right: 12px;
+        background: #F8F7F0;
+        border-radius: 0 0 20px 20px;
+    }
+
+    &-item {
+        height: 574px;
+        border-radius: 12px;
+        position: relative;
+        z-index: 1;
+
+        
+        @media #{$xs} {
+            height: 400px;
+        }
+
+        @media #{$sm} {
+            height: 574px;
+        }
+
+        .content-wrap {
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+            background: #fff;
+            width: calc(100% - 56px);
+            border-radius: 12px;
+            overflow: hidden;
+            transform: translateY(20%);
+            opacity: 0;
+            transition: var(--as-cube-1);
+        }
+
+        .item-btn {
+            background: var(--as-clr-sd-1);
+            font-size: 28px;
+            padding: 13px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner-div {
+            padding: 28px 32px;
+
+            @media #{$xs} {
+                padding: 28px 15px;
+            }
+
+            @media #{$sm} {
+                padding: 28px 32px;
+            }
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            @media #{$sm} {
+                font-size: 26px;
+            }
+        }
+        
+        &:hover {
+            .content-wrap {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+    
+    &-slider {
+        padding: 28px;
+
+        @media #{$xs} {
+            padding: 28px 10px;
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                max-width: 448px;
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+/* 
+    projects-3-end
+*/
+
 
 
 

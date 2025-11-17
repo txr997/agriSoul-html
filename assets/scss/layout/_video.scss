@@ -29,6 +29,80 @@
 
     }
 }
+
+
 /* 
     video-2-end
+*/
+
+
+/* 
+    video-3-start
+*/
+.as-video-3 {
+    &-area {
+        margin-left: 12px;
+        margin-right: 12px;
+        border-radius: 20px 20px 0 0;
+        height: 485px;
+        position: relative;
+        z-index: 1;
+        
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 60%;
+        }
+    
+    
+
+    }
+
+    &-title {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        z-index: 1;
+        font-weight: 800;
+        font-size: 100px;
+        letter-spacing: -0.02em;
+
+        span {
+            display: block;
+        }
+
+        
+        @media #{$xl} {
+            font-size: 90px;
+        }
+        
+        @media #{$lg} {
+            font-size: 80px;
+        }
+        
+        @media #{$md} {
+            font-size: 70px;
+        }
+        
+        @media #{$xs} {
+            font-size: 40px;
+            bottom: 0px;
+        }
+        
+        @media #{$sm} {
+            font-size: 60px;
+        }
+    }
+}
+
+
+/* 
+    video-3-end
 */

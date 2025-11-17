@@ -797,7 +797,45 @@ if ($('.as_p3_slider').length) {
 
 }
 
+/* 
+	projects-3-slider-function
+*/
+if ($('.as_pr3_slider').length) {
+	var as_pr3_slider = new Swiper(".as_pr3_slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 55,
+		slidesPerView: "auto",
 
+		autoplay: {
+			delay: 5000,
+		},
+
+	});
+
+}
+
+/* 
+	testimonial-3-slider-function
+*/
+if ($('.as_testi_3_slider').length) {
+	var as_testi_3_slider = new Swiper(".as_testi_3_slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 0,
+
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+
+		navigation: {
+			nextEl: ".as_testi-3_next",
+			prevEl: ".as_testi-3_prev",
+		},
+	});
+
+}
 
 //	services-1-tabs-hover-change
 document.querySelectorAll('.as-services-1-tabs-btn .nav-link').forEach(link => {
