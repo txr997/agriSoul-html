@@ -412,8 +412,9 @@
             animation: asH3social 5s linear infinite ;
 
             &:hover {
-                animation: unset ;
+                animation-play-state: paused;
             }
+    
 
             .bg-illus {
                 margin-right: 5px;
@@ -455,6 +456,11 @@
         .link-elm {
             font-size: 20px;
             color: #fff;
+            transition: var(--as-cube-2);
+
+            &:hover {
+                color: var(--as-clr-sd-1);
+            }
         }
     }
     
@@ -535,6 +541,74 @@
             }
             
         }
+
+
+        .swiper-wrapper {
+            .swiper-slide {
+                .as-hero-3-slider-item .bg-img {
+                    img {
+                        animation: h3-img-slide 1s;
+                    }
+                }
+
+                .as-hero-3-content {
+                    .as-subtitle-3, .hero-title , .hero-disc , .hero-btn {
+                        animation: h3-img-slide 1s;
+                    }
+                }
+
+                &:is(.swiper-slide-active) {
+                    .as-hero-3-slider-item .bg-img {
+                        img {
+                            animation: h3-img-slide-2 1s backwards;
+                     
+                        }
+                    }
+
+                    .as-hero-3-content {
+                        .as-subtitle-3, .hero-title , .hero-disc , .hero-btn {
+                            animation: h3-img-slide-2-text .7s backwards;
+                            
+                        }
+                        .as-subtitle-3 {
+                            animation-delay: .5s;
+                        }
+                        .hero-title {
+                            animation-delay: .6s;
+                        }
+                        .hero-disc {
+                            animation-delay: .7s;
+                        }
+                        .hero-btn {
+                            animation-delay: .8s;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        @keyframes h3-img-slide {
+            to {
+                transform: translateX(-50%) scale(1.2);
+                filter: blur(10px);
+            }
+        }
+        
+        @keyframes h3-img-slide-2 {
+            from {
+                transform: translateX(50%) scale(1.2);
+                filter: blur(10px);
+            }
+        }        
+        @keyframes h3-img-slide-2-text {
+            from {
+                transform: translateX(50%) scale(1.2);
+                filter: blur(10px);
+                opacity: 0;
+            }
+        }
+
     }
 }
 

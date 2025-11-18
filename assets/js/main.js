@@ -288,6 +288,40 @@ function afterPreloader() {
 				},
 			});
 		});
+
+
+		/* 
+			button-animation
+		*/
+		if ($(".wa_btn_split_1").length) {
+			var wa_btn_split_1 = $(".wa_btn_split_1");
+			gsap.registerPlugin(SplitText);
+
+			wa_btn_split_1.each(function (index, el) {
+				el.split = new SplitText(el, {
+					type: "words,chars",
+				});
+
+				$(el).on("mouseenter", function () {
+					el.split.chars.forEach((char, i) => {
+						let yValue = i % 2 === 0 ? -30 : 30;
+
+						gsap.fromTo(
+							char,
+							{ y: yValue, },
+							{
+								y: 0,
+								opacity: 1,
+								duration: 0.4,
+								ease: "power2.out",
+								delay: i * 0.05
+							}
+						);
+					});
+				});
+			});
+		}
+
 	}	
 
 
@@ -366,45 +400,11 @@ function afterPreloader() {
 				crossFade: true
 			},
 
-			// autoplay: {
-			// 	delay: 5000,
-			// },
-
-
-			on: {
-				slideChangeTransitionStart: () => {
-					as_h1_split_text();
-				},
+			autoplay: {
+				delay: 5000,
 			},
 
-
-
 		});
-
-
-		function as_h1_split_text() {
-			const currentSlide = document.querySelectorAll('.swiper-slide-active .h3_split_text');
-		
-
-			const split = new SplitText(currentSlide, { type: 'lines,chars' , linesClass: "split-line"  });
-			gsap.set(split.chars, { 
-				x: 50,
-				opacity: 0,
-			});
-		
-			gsap.to(split.chars, {
-				x: 0,
-				opacity: 1,
-				duration: 0.4,
-				ease: "ease1",
-				stagger: 0.02,
-				delay: .7,
-			});
-
-		}
-
-		as_h1_split_text();
-		
 
 	}
 
@@ -630,6 +630,47 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	asP3Tl.to(".as-work-process-3-svg .point-4", { opacity: 1, duration: 0.3 }, "<");
 }
 
+
+
+// services-3-bg-img-animation
+var asServices3bgImg = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".as-services-3-bg-img",
+		toggleActions: "play none none reverse",
+		start: "top 90%",
+		end: "top 20%",
+		scrub: 1,
+		markers: false,
+	}
+})
+
+asServices3bgImg.from(".as-services-3-bg-img img", {
+	yPercent: 100,
+})
+
+asServices3bgImg.from(".as-services-3-big-title", {
+	yPercent: 100,
+},"<50%")
+
+// products-showcase-3-title-animation
+var asProducts3title = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".as-products-showcase-3-sec-title",
+		toggleActions: "play none none reverse",
+		start: "top 90%",
+		end: "top 20%",
+		scrub: 1,
+		markers: false,
+	}
+})
+
+asProducts3title.from(".as-products-showcase-3-sec-title .title-1", {
+	xPercent: 50,
+})
+
+asProducts3title.from(".as-products-showcase-3-sec-title .title-2", {
+	xPercent: -50,
+},"<")
 
 
 /* 

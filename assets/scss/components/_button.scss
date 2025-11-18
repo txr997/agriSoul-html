@@ -285,13 +285,29 @@
     letter-spacing: 0.01em;
     border-radius: 8px;
     padding: 14px 28px;
+    transition: var(--as-cube-2);
+
 
     .icon {
         font-size: 18px;
     }
 
+    .text {
+        overflow: hidden;
+    }
+
+    &:hover {
+        background: var(--as-clr-pr-3);
+        transform: scale(97%);
+    }
+
     &:is(.has-clr-2) {
         background: var(--as-clr-pr-3);
+
+        
+        &:hover {
+            background: var(--as-clr-sd-1);
+        }
     }
 }
 
@@ -302,10 +318,15 @@
     align-items: center;
     gap: 5px;
     color: rgb(255 255 255 / 48%);
+    transition: var(--as-cube-2);
 
     i {
         color: #fff;
         font-size: 22px;
+    }
+
+    &:hover {
+        color: #fff;
     }
 }
 

@@ -501,6 +501,10 @@
         right: 0;
         top: 30%;
         z-index: -1;
+
+        img {
+            animation: designHubKImgF1 15s linear infinite;
+        }
     }
     
 }

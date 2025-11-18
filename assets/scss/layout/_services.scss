@@ -439,6 +439,12 @@
             .item-btn {
                 font-size: 30px;
                 color: var(--as-clr-sd-1);
+                transition: var(--as-cube-2);
+
+                &:hover {
+                    color: #fff;
+                    transform: translate(3px, -3px);
+                }
             }
 
             .bg-title {

@@ -475,6 +475,10 @@
             @media #{$sm} {
                 display: inline-flex;
             }
+
+            &:hover {
+                background: var(--as-clr-sd-1);
+            }
         }
 
         .as-offcanvas-btn-1 {
@@ -509,12 +513,18 @@
                 &:is(.dropdown) {
                     > a {
                         padding-right: 37px;
-
+               
                         &::before {
                             content: "\f103";
                             font-size: 12px;
                             right: 20px;
                         }
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        background: rgb(9 39 2 / 100%);
                     }
                 }
 
