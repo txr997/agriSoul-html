@@ -455,6 +455,11 @@
                 padding-left: 32px;
                 padding-right: 200px;
                 font-size: 14px;
+
+                @media #{$xs} {
+                    padding-right: 15px;
+                    padding-right: 15px;
+                }
             }
 
             .form-btn {
@@ -464,6 +469,11 @@
                 color: #000;
                 padding: 8.5px 28px;
                 font-size: 15px;
+
+                @media #{$xs} {
+                    position: unset;
+                    margin-top: 20px;
+                }
             }
         }
     }

@@ -207,9 +207,19 @@
 
     &-item {
         height: 574px;
-        border-radius: 12px;
         position: relative;
         z-index: 1;
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 110%;
+            position: absolute;
+            top: -27px;
+            right: -28px;
+            background: #092702;
+            opacity: 12%;
+        }
 
         
         @media #{$xs} {
@@ -218,6 +228,15 @@
 
         @media #{$sm} {
             height: 574px;
+        }
+
+
+        .img-elm {
+            border-radius: 12px;
+
+            img {
+                transition: var(--as-cube-2);
+            }
         }
 
         .content-wrap {
@@ -302,6 +321,12 @@
             .content-wrap {
                 transform: translateY(0);
                 opacity: 1;
+            }
+
+            .img-elm {
+                img {
+                    transform: scale(103%);
+                }
             }
         }
     }

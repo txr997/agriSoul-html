@@ -848,9 +848,9 @@ if ($('.as_pr3_slider').length) {
 		spaceBetween: 55,
 		slidesPerView: "auto",
 
-		autoplay: {
-			delay: 5000,
-		},
+		// autoplay: {
+		// 	delay: 5000,
+		// },
 
 	});
 
