@@ -584,7 +584,34 @@
         background: #092702;
         border-radius: 8px;
         padding: 0px 24px;
-        border: 1px solid rgb(230 255 168 / 36%);
+        // border: 1px solid rgb(230 255 168 / 36%);
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            padding: 1px; 
+            z-index: -1; 
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+
+            background: linear-gradient(
+                90deg,
+                rgba(230, 255, 168, 0.36) 0%,
+                rgba(252, 229, 146, 0.20) 100%
+            );
+        }
     }
 
     &-action-link {
@@ -592,11 +619,41 @@
         align-items: center;
         gap: 30px;
 
+        @media #{$xl,$lg,$md,$xs} {
+            display: none;
+        }
+
         .as-search-btn-3 {
             background: rgb(9 39 2 / 50%);
             border-radius: 100px;
-            border: 1px solid rgb(230 255 168 / 40%);
+            // border: 1px solid rgb(230 255 168 / 40%);
             padding: 7px 18px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 100px;
+                padding: 1px; 
+                z-index: -1; 
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+    
+                background: linear-gradient(
+                    90deg,
+                    rgba(230, 255, 168, 1) 0%,
+                    rgba(252, 229, 146, 0.14) 100%
+                );
+            }
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
     }
 
@@ -605,6 +662,24 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        .as-offcanvas-btn-1 {
+            background: var(--as-clr-sd-1);
+            color: #000;
+
+            @media #{$over,$xxxl,$xxl,$xl} {
+                display: none;
+            }
+        }
+
+        .as-pr-btn-4 {
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$sm} {
+                display: inline-flex;
+            }
+        }
     }
 }
 

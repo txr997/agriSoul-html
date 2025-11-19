@@ -330,6 +330,44 @@
     }
 }
 
+.as-pr-btn-4 {
+    font-family: var(--as-font-2);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    font-size: 16px;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+
+    .icon {
+        display: inline-flex;
+        flex: 0 0 auto;
+        width: 52px;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        border-radius: 10px;
+        background: var(--as-clr-sd-1);
+        transition: var(--as-cube-1);
+    }
+
+    .text {
+        background: var(--as-clr-sd-1);
+        padding: 14px 22px;
+        border-radius: 10px;
+        transition: var(--as-cube-1);
+    }
+
+    &:hover {
+        .icon {
+            transform: rotateX(180deg);
+            background: var(--as-clr-pr-3);
+        }
+    }
+}
 
 /* 
     button-end

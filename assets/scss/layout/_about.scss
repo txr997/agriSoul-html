@@ -527,3 +527,310 @@
 /* 
     about-3-end
 */
+/* 
+    about-4-start
+*/
+.as-about-4 {
+    &-area {
+        background-color: #EDF2EC;
+        padding-bottom: 510px;
+
+        @media #{$md,$xs} {
+            padding-bottom: 200px;
+        }
+    }
+
+    &-sec-title {
+        max-width: 900px;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1.9fr 1fr;
+        gap: 110px;
+
+        @media #{$lg} {
+            gap: 50px;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-expri {
+        text-align: center;
+        display: inline-block;
+        margin-left: 180px;
+        margin-top: -70px;
+
+        @media #{$xl,$lg} {
+            margin-left: 0px;
+        }
+
+        @media #{$md,$xs} {
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+
+        .sticker-img {
+            position: absolute;
+            top: 110px;
+            left: -50px;
+            z-index: 1;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        .number {
+            font-size: 480px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #C8D7C5;
+            line-height: 1;
+            margin-bottom: -90px;
+
+            @media #{$xxl} {
+                font-size: 460px;
+            }
+
+            @media #{$xl} {
+                font-size: 440px;
+            }
+
+            @media #{$lg} {
+                font-size: 400px;
+            }
+
+            @media #{$md} {
+                font-size: 320px;
+                margin-bottom: -40px;
+            }
+
+            @media #{$xs} {
+                font-size: 220px;
+                margin-bottom: 0px;
+            }
+
+            @media #{$sm} {
+                font-size: 280px;
+                margin-bottom: -40px;
+            }
+        }
+
+        .disc {
+            display: inline-block;
+        }
+    }
+    
+
+    &-features {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        li {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+    }
+
+    &-content {
+        .disc {
+            margin-top: 60px;
+        }
+
+        .btn-wrap {
+            margin-top: 40px;
+        }
+    }
+    
+
+    &-bg-img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: -2;
+    }
+
+    &-bg-plant {
+        width: 23%;
+        position: absolute;
+        right: -5%;
+        top: 6%;
+        z-index: -1;
+    }
+
+    &-img {
+        &-1 {
+            position: absolute;
+            bottom: 120px;
+            max-width: 340px;
+            height: 340px;
+            right: -30px;
+
+            mask-image: url("../img/about/a4-mask-1.png");
+            -webkit-mask-image: url("../img/about/a4-mask-1.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-2 {
+            position: absolute;
+            bottom: -130px;
+            right: 160px;
+            height: 246px;
+            max-width: 188px;
+
+
+            mask-image: url("../img/about/a4-mask-2.png");
+            -webkit-mask-image: url("../img/about/a4-mask-2.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-3 {
+            position: absolute;
+            bottom: -100px;
+            right: 340px;
+            max-width: 472px;
+            height: 472px;
+
+            mask-image: url("../img/about/a4-mask-7.png");
+            -webkit-mask-image: url("../img/about/a4-mask-7.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-4 {
+            position: absolute;
+            bottom: 13%;
+            left: 42%;
+            max-width: 255px;
+            height: 230px;
+
+            
+            mask-image: url("../img/about/a4-mask-3.png");
+            -webkit-mask-image: url("../img/about/a4-mask-3.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-5 {
+            position: absolute;
+            bottom: 0;
+            border-radius: 50%;
+            left: 50%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-6 {
+            position: absolute;
+            bottom: -100px;
+            left: 28%;
+            max-width: 365px;
+            height: 355px;
+
+            mask-image: url("../img/about/a4-mask-4.png");
+            -webkit-mask-image: url("../img/about/a4-mask-4.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-7 {
+            position: absolute;
+            bottom: 160px;
+            left: 21%;
+            max-width: 142px;
+            height: 142px;
+
+            mask-image: url("../img/about/a4-mask-5.png");
+            -webkit-mask-image: url("../img/about/a4-mask-5.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+        &-8 {
+            position: absolute;
+            bottom: -75px;
+            left: 13%;
+            max-width: 235px;
+            height: 235px;
+
+            mask-image: url("../img/about/a4-mask-6.png");
+            -webkit-mask-image: url("../img/about/a4-mask-6.png");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &-9 {
+            position: absolute;
+            bottom: 100px;
+            left: -40px;
+            max-width: 375px;
+            height: 375px;
+            border-radius: 50%;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/* 
+    about-4-end
+*/

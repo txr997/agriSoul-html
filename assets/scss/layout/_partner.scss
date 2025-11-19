@@ -87,3 +87,61 @@
 /* 
     partner-1-end
 */
+
+/* 
+    partner-4-start
+*/
+.as-partner-4 {
+    &-area {
+        padding-top: 24px;
+        padding-left: 22px;
+        background-color: #EDF2EC;
+        display: flex;
+        align-items: center;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+    }
+
+    &-img {
+        max-width: 426px;
+        width: 100%;
+        height: 220px;
+        border-radius: 16px;
+        flex: 0 0 auto;
+    }
+
+    &-logo {
+        display: flex;
+        gap: 120px;
+        margin-right: 120px;
+
+        
+        @media #{$md} {
+            gap: 80px;
+            margin-right: 80px;
+        }
+
+        @media #{$xs} {
+            gap: 40px;
+            margin-right: 40px;
+        }
+
+        @media #{$sm} {
+            gap: 60px;
+            margin-right: 60px;
+        }
+
+
+        .single-logo {
+            flex: 0 0 auto;
+        }
+    }
+    
+}
+
+/* 
+    partner-4-end
+*/
