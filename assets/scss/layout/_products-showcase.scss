@@ -259,3 +259,124 @@
 /* 
     products-showcase-3-end
 */
+/* 
+    products-showcase-4-start
+*/
+.as-products-showcase-4 {
+    &-area {
+        margin-top: -170px;
+    }
+
+    &-wrap {
+        margin-left: -80px;
+        margin-right: -80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 28px;
+
+        @media #{$xxxl,$xxl,$xl,$lg} {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        @media #{$md} {
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            margin-left: 0px;
+            margin-right: 0px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-item {
+        padding: 32px 32px;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.62%, #000000 100%);
+            opacity: 0.72;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .img-elm {
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+        .disc {
+            color: #fff;
+            font-size: 16px;
+            max-width: 330px;
+            margin-bottom: 22px;
+        }
+
+        .item-btn {
+            font-size: 16px;
+            color: var(--as-clr-sd-1);
+            border: 1px solid var(--as-clr-sd-1);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 5px;
+            padding: 7px 13px;
+            transition: var(--as-cube-2);
+
+            &:hover {
+                background: var(--as-clr-sd-1);
+                color: #000;
+            }
+        }
+
+
+        &:is(.has-clr-2) {
+            .item-btn {
+                color: var(--as-clr-pr-3);
+                border-color: var(--as-clr-pr-3);
+
+                &:hover {
+                    background: var(--as-clr-pr-3);
+                    color: #000;
+                }
+            }
+        }
+
+        &:is(.has-clr-3) {
+            .item-btn {
+                color: #FE4040;
+                border-color: #FE4040;
+
+                &:hover {
+                    background: #FE4040;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* 
+    products-showcase-4-end
+*/

@@ -334,7 +334,7 @@
     font-family: var(--as-font-2);
     font-weight: 700;
     letter-spacing: 0.02em;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     line-height: 1.5;
     font-size: 16px;
@@ -365,6 +365,23 @@
         .icon {
             transform: rotateX(180deg);
             background: var(--as-clr-pr-3);
+        }
+    }
+
+    &:is(.has-v2) {
+        color: #fff;
+        .text {
+            background: #00853A;
+        }
+        .icon {
+            background: #00853A;
+        }
+
+        &:hover {
+            .icon {
+                background: var(--as-clr-sd-1);
+                color: #000;
+            }
         }
     }
 }

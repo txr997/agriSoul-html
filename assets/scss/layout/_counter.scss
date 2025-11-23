@@ -135,3 +135,127 @@
 /* 
     counter-2-end
 */
+
+/* 
+    counter-4-start
+*/
+.as-counter-4 {
+    
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr .8fr 1fr;
+        gap: 100px;
+
+        @media #{$xl,$lg} {
+            gap: 50px;
+        }
+
+        @media #{$md} {
+            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            gap: 50px;
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-svg-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        @media #{$xl,$lg,$md,$xs} {
+            display: none;
+        }
+    }
+    
+
+    &-item {
+        .number {
+            font-size: 68px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 15px;
+            display: flex;
+
+            .plus {
+                font-size: 37px;
+                color: #00853A;
+                margin-top: 3px;
+            }
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 14px;
+
+
+        }
+
+        .disc {
+            margin-bottom: 35px;
+        }
+
+        .gallery-x-line {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            .line {
+                background: #092702;
+                height: 1px;
+                width: 100%;
+                opacity: 12%;
+            }
+        }
+        
+        .gallery-img {
+            display: flex;
+
+            &-single {
+                width: 48px;
+                height: 48px;
+                border-radius: 8px;
+                border: 2px solid #fff;
+
+                &:not(:first-child) {
+                    margin-left: -10px;
+                }
+            }
+            
+        }
+
+        &:nth-child(odd) {
+            @media #{$over,$xxxl,$xxl} {
+                margin-top: 50px;
+            }
+        }
+
+        &:is(.has-v2) {
+            .gallery-img {
+    
+                &-single {
+                    border-radius: 50%;
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+/* 
+    counter-4-end
+*/

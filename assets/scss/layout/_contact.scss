@@ -317,3 +317,56 @@
 /* 
     contact-2-end
 */
+
+/* 
+    contact-3-start
+*/
+.as-contact-4 {
+    &-area {
+        &::after {
+            content: "";
+            width: 100%;
+            height: calc(100% - 280px);
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &-sec-title {
+        max-width: 746px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.as-contact-1-form {
+    &:is(.has-contact-4) {
+        background: rgba(255, 255, 255, 0.24);
+        border: 1px solid #FFFFFF;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        max-width: 1020px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 60px 60px;
+        gap: 25px 36px;
+
+        @media #{$md,$xs} {
+            padding: 60px 30px;
+        }
+
+        .as-contact-1-form-input {
+            border-radius: 0;
+            border-bottom: 1px solid rgb(9 39 2 / 38%);
+            background: transparent;
+            color: var(--as-clr-h-1);
+        }
+    }
+}
+/* 
+    contact-3-end
+*/

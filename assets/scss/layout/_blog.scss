@@ -773,3 +773,115 @@
 /* 
     blog-3-end
 */
+
+/* 
+    blog-4-start
+*/
+.as-blog-4 {
+    &-area {
+        background-color: #EDF2EC;
+    }
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 72px;
+    }
+    &-item {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 12px;
+        padding-bottom: 24px;
+
+        .item-img {
+            height: 312px;
+            border-radius: 10px;
+            margin-bottom: 22px;
+        }
+
+        .meta-link {
+            display: flex;
+            gap: 20px;
+            font-weight: 500;
+
+
+            &-elm {
+                color: rgb(9 39 2 / 60%);
+                font-size: 14px;
+
+                &:not(:last-child) {
+                    position: relative;
+                    z-index: 1;
+
+                    &::after {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background-color: #FE4040;
+                        position: absolute;
+                        top: 8px;
+                        right: -13px;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-top: 17px;
+        }
+
+        .item-btn {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            justify-content: space-between;
+            background-color: #EDF2EC;
+            letter-spacing: 0.06em;
+            color: var(--as-clr-h-1);
+            font-weight: 600;
+            border-radius: 4px;
+            padding: 15px 20px;
+            margin-top: 22px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    &-slider-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 285px;
+
+        .as-slider-btn-3  {
+            background-color: #BEE77F;
+            border-radius: 8px;
+            width: 52px;
+            height: 52px;
+
+            &:hover {
+                background-color: #00853A;
+                color: #fff;
+            }
+        }
+
+        .as_b4_pagination {
+            font-size: 20px;
+            letter-spacing: -0.01em;
+
+            .swiper-pagination-total {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+/* 
+    blog-4-end
+*/
