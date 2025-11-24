@@ -930,6 +930,11 @@
             }
         }
 
+
+        .content {
+            padding: 0 16px;
+        }
+
         &:hover {
             .item-img {
                 &::after {

@@ -3405,7 +3405,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: flex;
   align-items: center;
   gap: 40px;
-  background: #092702;
+  background: rgba(9, 39, 2, 0.52);
   border-radius: 8px;
   padding: 0px 24px;
   position: relative;
@@ -4123,6 +4123,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
   z-index: 1;
   transform-style: unset !important;
+  border-right: 3px solid #B3A10F;
 }
 .as-hero-4-title-2::after {
   content: "";
@@ -4177,7 +4178,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 .as-hero-4-disc {
-  max-width: 430px;
+  max-width: 433px;
   color: #fff;
   margin-top: 45px;
 }
@@ -4306,7 +4307,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .as-hero-4-bg-img {
   width: 12%;
   position: absolute;
-  bottom: -5%;
+  bottom: -9%;
   left: 1%;
   z-index: -1;
 }
@@ -4900,6 +4901,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   justify-content: space-between;
   border-top: 2px solid rgba(255, 255, 255, 0.24);
   padding-top: 22px;
+  transition: var(--as-cube-2);
 }
 .as-focused-4-counter-single .number {
   color: #fff;
@@ -4912,6 +4914,16 @@ input:focus::placeholder, textarea:focus::placeholder {
 .as-focused-4-counter-single .disc {
   color: #fff;
   opacity: 80%;
+}
+.as-focused-4-counter-single .icon {
+  opacity: 16%;
+  transition: var(--as-cube-2);
+}
+.as-focused-4-counter-single:hover {
+  border-top: 2px solid rgb(255, 255, 255);
+}
+.as-focused-4-counter-single:hover .icon {
+  opacity: 100%;
 }
 
 /* 
@@ -6259,6 +6271,44 @@ input:focus::placeholder, textarea:focus::placeholder {
 @media (min-width: 1800px) {
   .as-products-4-sec-title {
     margin-left: -160px;
+  }
+}
+.as-products-4-sec-title .as-sec-title-3 {
+  font-size: 60px;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .as-products-4-sec-title .as-sec-title-3 {
+    font-size: 32px;
   }
 }
 .as-products-4-slider-btn {
@@ -8033,6 +8083,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .as-team-4-item:hover {
   background-color: #D4EE95;
 }
+.as-team-4-item:hover .social {
+  border-color: #00853A;
+  color: #00853A;
+}
 .as-team-4-item:hover .social .social-link {
   transform: translateY(0px);
   opacity: 1;
@@ -8973,6 +9027,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: #EDF2EC;
   display: flex;
   align-items: center;
+  gap: 80px;
 }
 @media (max-width: 767px) {
   .as-partner-4-area {
@@ -11326,6 +11381,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .as-blog-4-item .item-btn:hover {
   background-color: var(--as-clr-pr-3);
+}
+.as-blog-4-item .content {
+  padding: 0 16px;
 }
 .as-blog-4-item:hover .item-img::after {
   animation: asB1shadowKf 0.6s;

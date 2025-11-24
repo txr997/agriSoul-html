@@ -683,6 +683,7 @@
             justify-content: space-between;
             border-top: 2px solid rgb(255 255 255 / 24%);
             padding-top: 22px;
+            transition: var(--as-cube-2);
 
             .number {
                 color: #fff;
@@ -696,6 +697,18 @@
             .disc {
                 color: #fff;
                 opacity: 80%;
+            }
+
+            .icon {
+                opacity: 16%;
+                transition: var(--as-cube-2);
+            }
+
+            &:hover {
+                border-top: 2px solid rgb(255 255 255 / 100%);
+                .icon {
+                    opacity: 100%;
+                }
             }
         }
         

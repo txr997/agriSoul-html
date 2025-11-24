@@ -676,6 +676,7 @@
             position: relative;
             z-index: 1;
             transform-style: unset !important;
+            border-right: 3px solid #B3A10F;
 
 
             &::after {
@@ -729,7 +730,7 @@
     }
 
     &-disc {
-        max-width: 430px;
+        max-width: 433px;
         color: #fff;
         margin-top: 45px;
     }
@@ -879,7 +880,7 @@
     &-bg-img {
         width: 12%;
         position: absolute;
-        bottom: -5%;
+        bottom: -9%;
         left: 1%;
         z-index: -1;
 

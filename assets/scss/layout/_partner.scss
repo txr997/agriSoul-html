@@ -98,6 +98,7 @@
         background-color: #EDF2EC;
         display: flex;
         align-items: center;
+        gap: 80px;
 
         @media #{$xs} {
             flex-wrap: wrap;
