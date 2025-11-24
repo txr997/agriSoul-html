@@ -315,6 +315,7 @@
             bottom: 0;
             left: 0;
             z-index: -1;
+            transition: var(--as-cube-2);
         }
 
         .img-elm {
@@ -347,6 +348,16 @@
             }
         }
 
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+            .img-elm {
+                img {
+                    animation: bounce 1s;
+                }
+            }
+        }
 
         &:is(.has-clr-2) {
             .item-btn {

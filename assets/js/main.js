@@ -474,7 +474,7 @@ gsap.utils.toArray(".wa_parallax_bg").forEach(element => {
 			ease: "none",
 			scrollTrigger: {
 				trigger: element,
-				scrub: true,    
+				scrub: 1,    
 				markers: false,  
 			},
 		}
@@ -727,6 +727,26 @@ if ($('.as_t1_slider').length) {
 	});
 
 }
+
+
+// testimonial-3-title-animation
+var asT4title = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".as-testimonial-4-area",
+		toggleActions: "play none none reverse",
+		start: "top 90%",
+		end: "top 20%",
+		scrub: 1,
+		markers: false,
+	}
+})
+
+asT4title.from(".as-testimonial-4-title", {
+	yPercent: 100,
+})
+
+
+
 
 /* 
 	products-2-slider-function

@@ -675,6 +675,8 @@
             margin-top: 5px;
             position: relative;
             z-index: 1;
+            transform-style: unset !important;
+
 
             &::after {
                 content: "";
@@ -861,6 +863,9 @@
 
         &:hover {
             color: #fff;
+            b {
+                color: var(--as-clr-sd-1);
+            }
         }
 
         @keyframes borderKf {

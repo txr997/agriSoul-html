@@ -587,6 +587,7 @@
         margin-right: -50px;
         position: relative;
         margin-top: 40px;
+        z-index: 1;
 
         @media #{$xs} {
             margin-right: 0px;
@@ -680,6 +681,11 @@
         bottom: 20%;
         left: -2%;
         z-index: -1;
+
+        img {
+            animation: asSubtitleImg 10s linear infinite;
+            transform-origin: left top;
+        }
     }
     
 }

@@ -159,3 +159,15 @@
 /* 
     gallery-3-end
 */
+
+/* 
+    gallery-4-start
+*/
+.as-gallery-3-area {
+    &:is(.has-gallery-4) {
+        padding-top: 0;
+    }
+}
+/* 
+    gallery-4-end
+*/

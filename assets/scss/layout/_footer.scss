@@ -610,3 +610,26 @@
 /* 
     footer-3-end
 */
+/* 
+    footer-4-start
+*/
+.as-footer-3-area {
+    &:is(.has-footer-4) {
+        .as-footer-3-wrap {
+            margin-bottom: 230px;
+
+            @media #{$xs} {
+                margin-bottom: 100px;
+            }
+        }
+
+        .as-footer-1-big-title {
+            color: #fff;
+            letter-spacing: -0.04em;
+            opacity: 9%;
+        }
+    }
+}
+/* 
+    footer-4-end
+*/

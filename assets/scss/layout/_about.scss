@@ -562,7 +562,7 @@
         text-align: center;
         display: inline-block;
         margin-left: 180px;
-        margin-top: -70px;
+        margin-top: -50px;
 
         @media #{$xl,$lg} {
             margin-left: 0px;
@@ -575,7 +575,7 @@
 
         .sticker-img {
             position: absolute;
-            top: 110px;
+            top: 80px;
             left: -50px;
             z-index: 1;
 
@@ -587,10 +587,10 @@
         .number {
             font-size: 480px;
             font-weight: 700;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.07em;
             color: #C8D7C5;
             line-height: 1;
-            margin-bottom: -90px;
+            margin-bottom: -50px;
 
             @media #{$xxl} {
                 font-size: 460px;
@@ -606,7 +606,6 @@
 
             @media #{$md} {
                 font-size: 320px;
-                margin-bottom: -40px;
             }
 
             @media #{$xs} {
@@ -616,12 +615,14 @@
 
             @media #{$sm} {
                 font-size: 280px;
-                margin-bottom: -40px;
             }
         }
 
         .disc {
             display: inline-block;
+            font-weight: 500;
+            color: var(--as-clr-h-1);
+            font-size: 20px;
         }
     }
     
@@ -664,6 +665,11 @@
         right: -5%;
         top: 6%;
         z-index: -1;
+
+        img {
+            animation: asSubtitleImg 10s linear infinite;
+            transform-origin: right center;
+        }
     }
 
     &-img {

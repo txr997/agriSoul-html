@@ -746,6 +746,10 @@
         left: -50px;
         top: 5%;
         z-index: -1;
+
+        img {
+            animation: designHubKImgF1 15s linear infinite;
+        }
     }
 
     &-title {
