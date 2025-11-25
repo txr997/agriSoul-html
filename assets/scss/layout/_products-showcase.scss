@@ -391,3 +391,111 @@
 /* 
     products-showcase-4-end
 */
+
+/* 
+    products-showcase-5-start
+*/
+.as-products-showcase-5 {
+    &-area {
+        padding-bottom: 220px;
+    }
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+
+        .as-products-showcase-4-item {
+            padding: 44px 44px;
+
+            @media #{$lg,$md,$xs} {
+                padding: 44px 25px;
+            }
+
+            .subtitle {
+                font-size: 32px;
+            }
+            
+            .title {
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--as-clr-h-2);
+                max-width: 270px;
+                line-height: 1.2;
+                margin-bottom: 141px;
+
+                @media #{$lg,$md,$xs} {
+                    font-size: 28px;
+                }
+    
+            }
+
+            &::after {
+                display: none;
+            }
+
+            .item-btn {
+                background-color: var(--as-clr-pr-4);
+                border-color: transparent;
+                color: #fff;
+                padding: 11px 24px;
+
+                &:hover {
+                    background-color: transparent;
+                    border-color: var(--as-clr-pr-4);
+                    color: var(--as-clr-pr-4);
+                }
+            }
+
+            &:is(.has-clr-2) {
+                .subtitle {
+                    color: #FE4040;
+                }
+                .item-btn {
+                    background-color: #FE4040;
+
+                    &:hover {
+                        background: transparent;
+                        color: #FE4040;
+                        border-color: #FE4040;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-illus-1 {
+        width: 10%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        left: -3%;
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+    
+    &-illus-2 {
+        width: 16%;
+        text-align: right;
+        position: absolute;
+        right: -6%;
+        bottom: -8%;
+        z-index: -1;
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+}
+
+
+/* 
+    products-showcase-5-end
+*/

@@ -695,7 +695,7 @@
 
             &-elm {
                 a {
-                    color: #00853A;
+                    color: var(--as-clr-pr-4);
                     transition: var(--as-cube-2);
 
                     &:hover {
@@ -961,7 +961,7 @@
             height: 52px;
 
             &:hover {
-                background-color: #00853A;
+                background-color: var(--as-clr-pr-4);
                 color: #fff;
             }
         }

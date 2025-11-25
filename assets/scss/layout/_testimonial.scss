@@ -557,10 +557,10 @@
             border-radius: 8px;
             background: rgb(255 255 255 / 48%);
             z-index: 2;
-            color: #00853A;
+            color: var(--as-clr-pr-4);
 
             &:hover {
-                background-color: #00853A;
+                background-color: var(--as-clr-pr-4);
                 color: #fff;
             }
         }
@@ -653,7 +653,7 @@
 
             &-name {
                 font-size: 23px;
-                color: #00853A;
+                color: var(--as-clr-pr-4);
                 font-weight: 700;
                 margin-bottom: 2px;
             }
@@ -851,7 +851,7 @@
 
                 .quote-icon {
                     font-size: 60px;
-                    color: #00853A;
+                    color: var(--as-clr-pr-4);
                     opacity: 24%;
                     position: absolute;
                     top: 140px;
@@ -893,7 +893,7 @@
                     .dot {
                         width: 6px;
                         height: 6px;
-                        background: #00853A;
+                        background: var(--as-clr-pr-4);
                         border-radius: 50%;
                     }
                     

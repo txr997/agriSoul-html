@@ -371,10 +371,10 @@
     &:is(.has-v2) {
         color: #fff;
         .text {
-            background: #00853A;
+            background: var(--as-clr-pr-4);
         }
         .icon {
-            background: #00853A;
+            background: var(--as-clr-pr-4);
         }
 
         &:hover {

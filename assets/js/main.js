@@ -1104,6 +1104,57 @@ if ($('.as_b4_slider').length) {
 
 }
 
+/* 
+	categories-5-slider-function
+*/
+if ($('.as_cat5_slider').length) {
+	var as_cat5_slider = new Swiper(".as_cat5_slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 24,
+
+		// autoplay: {
+		// 	delay: 5000,
+		// },
+
+
+		navigation: {
+			nextEl: ".as_cat5_slider_next",
+			prevEl: ".as_cat5_slider_prev",
+		},
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+			1400: {
+				slidesPerView: 6,
+			},
+			1600: {
+				slidesPerView: 6,
+			},
+
+		},
+
+	});
+
+	
+
+}
+
 
 //	services-1-tabs-hover-change
 document.querySelectorAll('.as-services-1-tabs-btn .nav-link').forEach(link => {
@@ -1112,6 +1163,99 @@ document.querySelectorAll('.as-services-1-tabs-btn .nav-link').forEach(link => {
 		tabTrigger.show();
 	});
 });
+
+
+/* 
+	offer-countdown
+*/
+if($("#mins").length) {
+	function getHtmlInitialValues() {
+		return {
+			d: parseInt(document.getElementById("days").textContent),
+			h: parseInt(document.getElementById("hours").textContent),
+			m: parseInt(document.getElementById("mins").textContent),
+			s: parseInt(document.getElementById("secs").textContent)
+		};
+	}
+	
+	let htmlInitial = getHtmlInitialValues();
+	let savedData = localStorage.getItem("countdown_state");
+	
+	let d, h, m, s;
+	
+	// Check saved state
+	if (savedData) {
+		let stored = JSON.parse(savedData);
+	
+		// HTML changed? then reset
+		if (
+			stored.initial.d !== htmlInitial.d ||
+			stored.initial.h !== htmlInitial.h ||
+			stored.initial.m !== htmlInitial.m ||
+			stored.initial.s !== htmlInitial.s
+		) {
+			d = htmlInitial.d;
+			h = htmlInitial.h;
+			m = htmlInitial.m;
+			s = htmlInitial.s;
+	
+			localStorage.setItem(
+				"countdown_state",
+				JSON.stringify({
+					initial: htmlInitial,
+					current: { d, h, m, s }
+				})
+			);
+		} else {
+			d = stored.current.d;
+			h = stored.current.h;
+			m = stored.current.m;
+			s = stored.current.s;
+		}
+	} else {
+		d = htmlInitial.d;
+		h = htmlInitial.h;
+		m = htmlInitial.m;
+		s = htmlInitial.s;
+	
+		localStorage.setItem(
+			"countdown_state",
+			JSON.stringify({
+				initial: htmlInitial,
+				current: { d, h, m, s }
+			})
+		);
+	}
+	
+	function startCountdown() {
+		if (d <= 0 && h <= 0 && m <= 0 && s <= 0) return;
+	
+		s--;
+		if (s < 0) { s = 59; m--; }
+		if (m < 0) { m = 59; h--; }
+		if (h < 0) { h = 23; d--; }
+	
+		document.getElementById("days").textContent = String(d).padStart(2, "0");
+		document.getElementById("hours").textContent = String(h).padStart(2, "0");
+		document.getElementById("mins").textContent = String(m).padStart(2, "0");
+		document.getElementById("secs").textContent = String(s).padStart(2, "0");
+	
+		// Save current state
+		localStorage.setItem(
+			"countdown_state",
+			JSON.stringify({
+				initial: htmlInitial,
+				current: { d, h, m, s }
+			})
+		);
+	}
+	setInterval(startCountdown, 1000);
+	
+}
+
+
+
+
 
 /* 
     marquee-right
