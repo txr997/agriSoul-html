@@ -178,6 +178,8 @@
     
     .list {
         background: var(--as-clr-pr-4);
+        right: 0;
+        left: unset;
         li {
             &:is(.selected) {
                 color: #000;

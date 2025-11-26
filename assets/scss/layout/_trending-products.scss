@@ -1,0 +1,105 @@
+/* 
+    trending-5-start
+*/
+.as-trending-products-5 {
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 3fr 1fr;
+        align-items: end;
+
+        @media #{$lg,$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        .as-products-showcase-4-item {
+            text-align: center;
+            height: 514px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 530px;
+
+            .disc {
+                margin-top: auto;
+            }
+        }
+    }
+
+    &-title {
+        margin-bottom: 35px;
+    }
+
+    &-left {
+        .tabs-x-slider-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            @media #{$md,$xs} {
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+
+            &-line {
+                width: 100%;
+                height: 2px;
+                background: radial-gradient(50% 50% at 50% 50%, #C7D4C4 0%, #FFFFFF 100%);
+            }
+
+            .btn-wrap {
+                border: 2px solid rgb(9 39 2 / 16%);
+                flex: 0 0 auto;
+                border-radius: 100px;
+
+                .as-slider-btn-3 {
+                    &:hover {
+                        background: var(--as-clr-pr-4);
+                    }
+                }
+            }
+        }
+    }
+
+    &-tabs {
+        &-btn {
+            display: flex;
+            gap: 12px;
+            flex: 0 0 auto;
+
+            @media #{$xs} {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .nav-link {
+                border: 2px solid rgb(89 93 88 / 20%);
+                background: transparent;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 8px 24px;
+                transition: var(--as-cube-2);
+
+                &:hover {
+                    background: var(--as-clr-pr-4);
+                    color: #fff;
+                }
+
+                &:is(.active) {
+                    background: var(--as-clr-pr-4);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* 
+    trending-5-end
+*/

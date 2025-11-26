@@ -1156,6 +1156,67 @@ if ($('.as_cat5_slider').length) {
 }
 
 
+/* 
+	trending-products-5-slider-function
+*/
+if ($('.as_tp5_slider').length) {
+	let tp5Sliders = {};
+
+	function init_tp5_slider(tabId) {
+	
+		if (tp5Sliders[tabId]) {
+			tp5Sliders[tabId].destroy(true, true);
+		}
+	
+		let sliderEl = $(tabId).find('.as_tp5_slider');
+	
+		if (sliderEl.length) {
+
+			tp5Sliders[tabId] = new Swiper(sliderEl[0], {
+				loop: true,
+				speed: 400,
+				spaceBetween: 16,
+				navigation: {
+					nextEl: ".as_td5_slider_next",
+					prevEl: ".as_td5_slider_prev",
+				},
+				breakpoints: {
+					0: { slidesPerView: 1 },
+					576: { slidesPerView: 1 },
+					768: { slidesPerView: 2 },
+					992: { slidesPerView: 3 },
+					1200: { slidesPerView: 2 },
+					1400: { slidesPerView: 3 },
+					1600: { slidesPerView: 3 },
+				},
+			});
+
+		}
+	}
+	
+	$('button[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
+		let targetTab = $(e.target).attr("data-bs-target");
+	
+		setTimeout(function () {
+			init_tp5_slider(targetTab);
+		}, 50);
+	});
+	
+	$(document).ready(function () {
+		let firstActive = $('button[data-bs-toggle="pill"].active').attr("data-bs-target");
+	
+		if (firstActive) {
+			setTimeout(function () {
+				init_tp5_slider(firstActive);
+			}, 100);
+		}
+	});
+	
+	
+
+}
+
+
 //	services-1-tabs-hover-change
 document.querySelectorAll('.as-services-1-tabs-btn .nav-link').forEach(link => {
 	link.addEventListener('mouseenter', () => {
