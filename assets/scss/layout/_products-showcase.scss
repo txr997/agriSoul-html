@@ -479,6 +479,11 @@
         @media #{$xs} {
             display: none;
         }
+
+        
+        img {
+            animation: designHubKImgF1 10s linear infinite;
+        }
     }
     
     &-illus-2 {
@@ -491,6 +496,11 @@
 
         @media #{$xs} {
             display: none;
+        }
+
+        
+        img {
+            animation: designHubKImgF1 20s linear infinite;
         }
     }
 }

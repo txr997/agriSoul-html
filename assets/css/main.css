@@ -70,6 +70,7 @@ CSS INDEX
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 :root {
   scroll-behavior: inherit;
   --as-font-1: "Albert Sans", sans-serif;
@@ -1731,6 +1732,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 8px;
   padding: 14px 28px;
   transition: var(--as-cube-2);
+  color: var(--as-clr-h-4);
 }
 .as-pr-btn-3 .icon {
   font-size: 18px;
@@ -4676,9 +4678,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 64px;
   font-weight: 800;
   letter-spacing: -0.01em;
+  line-height: 1.062;
 }
 .as-hero-5-content .hero-title span {
-  font-family: var(--as-font-3);
+  font-family: "Playfair Display", serif;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .as-hero-5-content .hero-title {
@@ -6929,6 +6932,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .as-products-5-item-wrap .as-products-3-item {
   background: #fff;
   transition: var(--as-cube-2);
+  padding: 3px;
 }
 .as-products-5-item-wrap .as-products-3-item .content-wrap {
   background: #EDF2EC;
@@ -10896,9 +10900,34 @@ input:focus::placeholder, textarea:focus::placeholder {
   justify-content: center;
   margin-bottom: 26px;
 }
+.as-categories-5-item .item-img img {
+  transition: var(--as-cube-2);
+}
 .as-categories-5-item .name {
   font-size: 20px;
   color: var(--as-clr-h-2);
+}
+.as-categories-5-item .name a {
+  width: 100%;
+  display: inline !important;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+  -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.as-categories-5-item .name:hover {
+  color: var(--as-clr-pr-1);
+}
+.as-categories-5-item .name:hover a {
+  color: inherit;
+  background-size: 100% 100%;
+}
+.as-categories-5-item:hover .item-img img {
+  transform: scale(1.1);
 }
 .as-categories-5-item:is(.has-clr-2) {
   background: rgba(218, 242, 253, 0.72);
@@ -10916,6 +10945,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   background: rgba(243, 228, 220, 0.72);
 }
 
+.as-products-3-slider-btn:is(.has-categories-5) .as-slider-btn-3:is(.active) {
+  background: var(--as-clr-pr-4);
+  color: #fff;
+}
 .as-products-3-slider-btn:is(.has-categories-5) .as-slider-btn-3:hover {
   background: var(--as-clr-pr-4);
 }
@@ -11346,6 +11379,9 @@ input:focus::placeholder, textarea:focus::placeholder {
     display: none;
   }
 }
+.as-products-showcase-5-illus-1 img {
+  animation: designHubKImgF1 10s linear infinite;
+}
 .as-products-showcase-5-illus-2 {
   width: 16%;
   text-align: right;
@@ -11359,6 +11395,9 @@ input:focus::placeholder, textarea:focus::placeholder {
     display: none;
   }
 }
+.as-products-showcase-5-illus-2 img {
+  animation: designHubKImgF1 20s linear infinite;
+}
 
 /* 
     products-showcase-5-end
@@ -11370,7 +11409,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: grid;
   gap: 24px;
   grid-template-columns: 3fr 1fr;
-  align-items: end;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .as-trending-products-5-wrap {
@@ -11379,12 +11417,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .as-trending-products-5-wrap .as-products-showcase-4-item {
   text-align: center;
-  height: 514px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 530px;
+  margin-top: 85px;
 }
 .as-trending-products-5-wrap .as-products-showcase-4-item .disc {
   margin-top: auto;
@@ -11415,6 +11453,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 100px;
 }
 .as-trending-products-5-left .tabs-x-slider-btn .btn-wrap .as-slider-btn-3:hover {
+  background: var(--as-clr-pr-4);
+}
+.as-trending-products-5-left .tabs-x-slider-btn .btn-wrap .as-slider-btn-3:is(.active) {
+  color: #fff;
   background: var(--as-clr-pr-4);
 }
 .as-trending-products-5-tabs-btn {
@@ -12302,6 +12344,22 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 280px;
   border-radius: 12px;
   margin-bottom: 20px;
+  position: relative;
+}
+.as-blog-5-item .item-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.as-blog-5-item .item-img img {
+  transition: var(--as-cube-2);
 }
 .as-blog-5-item .item-categories {
   display: inline-flex;
@@ -12324,6 +12382,25 @@ input:focus::placeholder, textarea:focus::placeholder {
     font-size: 20px;
   }
 }
+.as-blog-5-item .title a {
+  width: 100%;
+  display: inline !important;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+  -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.as-blog-5-item .title:hover {
+  color: var(--as-clr-pr-1);
+}
+.as-blog-5-item .title:hover a {
+  color: inherit;
+  background-size: 100% 100%;
+}
 .as-blog-5-item .item-date {
   position: absolute;
   top: 16px;
@@ -12343,6 +12420,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 .as-blog-5-item .item-date .month {
   font-size: 16px;
 }
+.as-blog-5-item:hover .item-img::after {
+  animation: asB1shadowKf 0.6s;
+}
+.as-blog-5-item:hover .item-img img {
+  transform: scale(103%);
+}
 .as-blog-5-all-btn {
   padding: 10px 0;
   margin-top: 55px;
@@ -12361,6 +12444,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   right: -80px;
   top: 20%;
   z-index: -1;
+}
+.as-best-seller-5-bg-illus img {
+  animation: designHubKImgF1 20s linear infinite;
 }
 .as-best-seller-5-title-x-btn {
   display: flex;
@@ -12516,6 +12602,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   background: #fff;
   border-radius: 10px;
 }
+.as-best-seller-5-item .item-img img {
+  transition: var(--as-cube-2);
+}
 .as-best-seller-5-item .categories {
   font-size: 14px;
   font-weight: 500;
@@ -12525,6 +12614,25 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 20px;
   font-weight: 700;
   margin-top: 7px;
+}
+.as-best-seller-5-item .name a {
+  width: 100%;
+  display: inline !important;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+  -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.as-best-seller-5-item .name:hover {
+  color: var(--as-clr-pr-1);
+}
+.as-best-seller-5-item .name:hover a {
+  color: inherit;
+  background-size: 100% 100%;
 }
 .as-best-seller-5-item .item-rating {
   display: flex;
@@ -12543,6 +12651,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-left: 10px;
   color: #999999;
   font-size: 15px;
+}
+.as-best-seller-5-item:hover .item-img img {
+  transform: scale(1.1);
 }
 
 /* 

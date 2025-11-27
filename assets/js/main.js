@@ -408,6 +408,15 @@ function afterPreloader() {
 
 	}
 
+	
+	// home-5-img
+	var asHome5img = gsap.timeline()
+	asHome5img.from(".as-hero-5-img", {
+		ease: "power1.inOut",
+		duration: 1,
+		scale: 1.35, 
+	})
+
 
 /* 
 	after-preloader-end
@@ -939,6 +948,12 @@ if ($('.as_testi_3_slider').length) {
 			crossFade: true
 		},
 
+		
+		autoplay: {
+			delay: 5000,
+		},
+
+
 		navigation: {
 			nextEl: ".as_testi-3_next",
 			prevEl: ".as_testi-3_prev",
@@ -1113,9 +1128,9 @@ if ($('.as_cat5_slider').length) {
 		speed: 400,
 		spaceBetween: 24,
 
-		// autoplay: {
-		// 	delay: 5000,
-		// },
+		autoplay: {
+			delay: 5000,
+		},
 
 
 		navigation: {
@@ -1224,6 +1239,24 @@ document.querySelectorAll('.as-services-1-tabs-btn .nav-link').forEach(link => {
 		tabTrigger.show();
 	});
 });
+
+
+if($(".as-slider-btn-3").length) {
+	const buttons = document.querySelectorAll('.as-slider-btn-3');
+	const defaultActive = buttons[1]; 
+	
+	buttons.forEach(btn => {
+		btn.addEventListener('mouseenter', function () {
+			buttons.forEach(b => b.classList.remove('active'));
+			this.classList.add('active');
+		});
+	
+		btn.addEventListener('mouseleave', function () {
+			buttons.forEach(b => b.classList.remove('active'));
+			defaultActive.classList.add('active');
+		});
+	});
+}
 
 
 /* 
