@@ -811,11 +811,21 @@
                 color: var(--as-clr-pr-4);
                 background: #fff;
                 transition: var(--as-cube-2);
+                position: relative;
+                z-index: 1;
+
 
                 &:hover {
                     background: var(--as-clr-pr-4);
                     color: #fff;
+
+                    .tooltips {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
                 }
+
+
             }
         }
 
@@ -1022,11 +1032,40 @@
                     color: var(--as-clr-pr-4);
                     background: #fff;
                     transition: var(--as-cube-2);
+                    position: relative;
+                    z-index: 1;
+
+                    .tooltips {
+                        position: absolute;
+                        left: -17px;
+                        bottom: 98%;
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        white-space: nowrap;
+                        flex: 0 0 auto;
+                        padding: 2px 6px;
+                        padding-bottom: 10px;
+                        font-size: 14px;
+                        color: var(--as-clr-h-4);
+                        font-weight: 500;
+                        transform: translateY(-10px);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: var(--as-cube-2);
+                    }
+    
     
                     &:hover {
                         background: var(--as-clr-pr-4);
                         color: #fff;
+
+                        .tooltips {
+                            transform: translateY(0px);
+                            opacity: 1;
+                            visibility: visible;
+                        }
                     }
+
                 }
             }
 
