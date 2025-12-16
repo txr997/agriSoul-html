@@ -13108,6 +13108,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     footer-4-end
 */
+
 /* 
     breadcrumb-start
 */
@@ -13240,6 +13241,52 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     breadcrumb-end
+*/
+/* 
+    404-PAGE-START
+*/
+.as-not-found-area {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+.as-not-found-img {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.as-not-found-img img {
+  margin-left: -170px;
+}
+@media (max-width: 767px) {
+  .as-not-found-img img {
+    margin-left: 0px;
+  }
+}
+.as-not-found-title {
+  font-family: var(--as-font-1);
+  font-size: 50px;
+  line-height: 1.071;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 45px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .as-not-found-title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .as-not-found-title {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .as-not-found-title {
+    font-size: 40px;
+  }
+}
+
+/* 
+    404-PAGE-END
 */
 /* 
     pages
