@@ -8,6 +8,63 @@
 (function ($) {
 "use strict";
 
+window.addEventListener('load', function(){
+	if ($('.as_hero_6_preview_slider').length) {
+
+		let as_hero_6_preview_slider = new Swiper('.as_hero_6_preview_slider', {
+			loop: true,
+			speed: 1000,
+			slidesPerView: 1,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+		});
+	
+		let as_hero_6_main_slider = new Swiper('.as_hero_6_main_slider', {
+			loop: true,
+			speed: 1000,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+			navigation: {
+				nextEl: ".as_hero6_slider_next",
+				prevEl: ".as_hero6_slider_prev",
+			},
+	
+			thumbs: {
+				swiper: as_hero_6_preview_slider,
+			},
+		});
+	
+	}
+
+
+
+})
+
+
+// wa_zoomOut_img
+gsap.utils.toArray(".wa_zoomOut_img2").forEach(wa_zoomOut_img2 => {
+	gsap.fromTo(
+		wa_zoomOut_img2,
+		{ scale: 1.15 }, 
+		{ 
+			scale: 1, 
+			ease: "power1.inOut",
+			duration: 1.5,
+			scrollTrigger: {
+				trigger: wa_zoomOut_img2,
+				start: "top 70%",
+				markers: false,     
+			},
+		}
+	);
+});
+
+ 
+
 /* 
 	services-6-slider-function
 */
@@ -125,7 +182,7 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 if ($('.as_pro6_slider').length) {
 	var as_pro6_slider = new Swiper(".as_pro6_slider", {
 		loop: true,
-		speed: 400,
+		speed: 1000,
 		spaceBetween: 32,
 		centeredSlides: true,
 
@@ -215,5 +272,32 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 	
 }
 
+
+// step-6-card-animation
+if (window.matchMedia("(min-width: 1400px)").matches) {  
+    let asTeam2card = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".as-step-6-wrap",
+            start: "top 70%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+            markers: false,
+        },
+    });
+    
+    asTeam2card.from(".as-step-6-card.has-1", { 
+        xPercent: 100,
+        autoAlpha: 0,
+        duration: .5,
+    });
+    
+    asTeam2card.from(".as-step-6-card.has-4", { 
+        xPercent: -100,
+        autoAlpha: 0,
+        duration: .5,
+    },"<");
+    
+
+}
 
 })(jQuery);
