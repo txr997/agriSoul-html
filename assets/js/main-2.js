@@ -278,26 +278,67 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
     let asTeam2card = gsap.timeline({
         scrollTrigger: {
             trigger: ".as-step-6-wrap",
-            start: "top 70%",
-            end: "bottom bottom",
+            start: "top 80%",
+            end: "top 10%",
             toggleActions: "play none none reverse",
+			scrub: true,
             markers: false,
         },
     });
     
     asTeam2card.from(".as-step-6-card.has-1", { 
-        xPercent: 100,
-        autoAlpha: 0,
+        xPercent: 106,
+        autoAlpha: 1,
         duration: .5,
     });
     
     asTeam2card.from(".as-step-6-card.has-4", { 
-        xPercent: -100,
-        autoAlpha: 0,
+        xPercent: -106,
+        autoAlpha: 1,
         duration: .5,
     },"<");
     
 
 }
+
+// about-6-img-animation
+if (window.matchMedia("(min-width: 1400px)").matches) {  
+    let asTeam2card = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".as-about-6-wrap",
+            start: "top 30%",
+            toggleActions: "play none none reverse",
+			scrub: true,
+            markers: false,
+        },
+    });
+    
+    asTeam2card.from(".as-about-6-img-2", { 
+        y: -120,
+    });
+
+    
+
+}
+
+
+
+if($(".wa_hover_class_toggle").length) {
+    const wa_hover_class = document.querySelectorAll(".wa_hover_class_toggle");
+    const defaultActive = document.querySelector(".wa_hover_class_toggle.active");
+    wa_hover_class.forEach(card => {
+        card.addEventListener("mouseenter", function () {
+            wa_hover_class.forEach(c => c.classList.remove("active"));
+            this.classList.add("active");
+        });
+        card.addEventListener("mouseleave", function () {
+            wa_hover_class.forEach(c => c.classList.remove("active"));
+            if (defaultActive) {
+                defaultActive.classList.add("active");
+            }
+
+        });
+    });
+};
 
 })(jQuery);
